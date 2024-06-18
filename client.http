@@ -1,6 +1,7 @@
 @baseURL = http://localhost:3000
+@authToken = {{autentica_usuario.response.body.access_token}}
 
-# @name cria conta
+# @name nova_conta
 POST {{baseURL}}/accounts
 Content-Type: application/json
 
@@ -12,7 +13,7 @@ Content-Type: application/json
 
 ###
 
-# @name autentica usuario
+# @name autentica_usuario
 POST {{baseURL}}/sessions
 Content-Type: application/json
 
@@ -20,3 +21,11 @@ Content-Type: application/json
     "email": "kevindiego@gmail.com",
     "senha": "123456"
 }
+
+###
+
+# @name cria_question
+POST {{baseURL}}/questions
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
