@@ -29,3 +29,16 @@ POST {{baseURL}}/questions
 Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
+{
+    "titulo": "Qual melhor sistema",
+    "conteudo": "Qual melhor sistema operacional para desenvolvimento web?"
+}
+
+
+###
+
+# @name fetch_questions
+GET {{baseURL}}/questions?page=2
+Content-Type: application/json
+Authorization: Bearer {{authToken}}
+
