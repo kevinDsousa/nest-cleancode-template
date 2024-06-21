@@ -22,5 +22,6 @@
       "@/*": ["src/*"]
     },
     "types": ["vitest/globals"]
-  }
+  },
+  "exclude": ["node_modules", "client.http"]
 }
